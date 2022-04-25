@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     
@@ -16,5 +16,5 @@
     <h1>Salut page 1 !</h1>
 
     <img src="./assets/img/elephant.png" alt="logo">
-    <script src="./js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
