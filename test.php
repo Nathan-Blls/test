@@ -57,5 +57,14 @@ echo "<br>";
 // Concaténation :
 
 echo "Bonjour, je m'appelle ". $userName . " !" . $c . "J'ai " . $b.$a . " ans !" . $c . "J'habite au " .$b . 7 . " boulevard national";
+echo "<br>";
+echo "<br>";
+// Constantes :
+define ("douze", 12);
+echo douze;
+echo "<br>";
+const verite = true;
+echo verite;
+
 ?>
 
