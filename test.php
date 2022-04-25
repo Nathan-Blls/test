@@ -37,5 +37,25 @@ $text= "Ceci est un texte";
 
 $mot = "gros mot";
 
-echo $text ." ".$mot;
+
+echo "<br>";
+
+$userName = "Bob";
+$a = 4;
+$b = 3;
+$c = "<br>";
+
+echo "Bonjour, je m'appelle "; echo $userName; echo " !";
+echo $c;
+echo "J'ai "; echo $b; echo $a; echo " ans !";
+echo $c;
+echo "J'habite au "; echo $b; echo ($a+$b); echo " boulevard National";
+
+echo "<br>";
+echo "<br>";
+
+// Concaténation :
+
+echo "Bonjour, je m'appelle ". $userName . " !" . $c . "J'ai " . $b.$a . " ans !" . $c . "J'habite au " .$b . 7 . " boulevard national";
 ?>
+
