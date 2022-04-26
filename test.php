@@ -61,4 +61,6 @@ $valo = [
     "mode" => ["INTENSIFICATION","MATCHMAKING"]
 ];
 
-echo $valo["mode"][1]; // ici je choisis la clé "mode" avec la 2ème valeur (1) = MATCHMAKING 
+// echo $valo["mode"][1]; // ici je choisis la clé "mode" avec la 2ème valeur (1) = MATCHMAKING 
+
+echo count($valo); // count va compter les éléments d'un tableau, ici 4 éléments = affiche 4. (ne commence pas à 0)
