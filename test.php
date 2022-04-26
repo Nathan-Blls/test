@@ -1,25 +1,43 @@
 <?php
-// LES ARRAY SIMPLES
+// LES TABLEAUX MULTIDIMENSIONNELS, 2D 
 
-$fruits = ["fraise","grenade","melon","fakya","abricot"];
+// $games = [ 
+//     ["tarkov", 10, false],
+//     ["cod", 100, false], 
+//     ["mario", 1, false], 
+//     ["cs", 10, true] 
+// ];
 
-// echo $fruits : bug car echo pour "string"
+// var_dump($games);
 
-// var_dump : pour débugguer
-var_dump($fruits);
+// var_dump($games[3][0]);
 
-echo "<pre>"; // <pre></pre> : pour rendre le visuel plus beau
-print_r($fruits);
-echo "</pre>";
+// 3D 
 
-print_r("Hello");
+$toto = "Michel";
 
-echo "<br>"; // saut de ligne
+// $games = [ 
+//     ["tarkov", 10, false, ["1v1", "2v2", "3v3"]],
+//     ["cod", 100, false], 
+//     ["mario", 1, false], 
+//     ["cs", 10, true] 
+// ];
 
-echo $fruits [4]; // 4ème élément du tableau = abricot (tableau commence à 0)
+// var_dump($games[0][3][1]); // = 2v2 car 0 est 1er élément du tableau, 3 le 4ème (autre tableau), et 1 "2v2"
 
-echo "<br>";
+$games [] = ["toto", "tata"];
+//$games = "tata";
+var_dump($games);
 
-echo $fruits [4]= "pêche"; // modification du 4ème élément par un autre.
+$tab = ["a", 1, 2, true];
 
-var_dump($fruits); // vérification du changement
+$tab[] = false; //ajout à la fin du tableau
+
+var_dump($tab); // a, 1, 2, true, FALSE
+
+$games3D = [
+    ["tarkov", 10, false],
+    ["cod", 100, false], 
+    ["mario", 1, false], 
+    ["cs", 10, true, ["MM", "BOMBE","OTAGES"]]
+];
