@@ -1,51 +1,32 @@
 <?php
 
-// IF ET LOOP
+// SWITCH CASE
 
-// for ($i=0; $i <= 10; $i++) {
-    
-// echo "<br> $i";
+// $i = 0;
 
-//     if ($i % 2 == 0) { // modulo
-//     echo ": c'est pair";
-//     } else {
-//         echo ": c'est impair";
-//     }
+// if ($i ==0) {
+//     echo "i égal 0";
+// }elseif ($i == 1) {
+//     echo "i égal 1";
+// }elseif ($i == 2) {
+//     echo "i égal 2";
 // }
 
- // IF ET ELSE :
+$i = 0;
 
-//  if (false) {
-//     echo "Si" ;
-//  }else {
-//      echo "Sinon";
-//  };
+switch ($i) {
+        case 0:   // si i = 0 >> va afficher "i égal 0"
+        echo "i égal 0";
+        break;
 
-// EXO : avoir le même rendu que le code ci-dessous, en changeant le code :
-// code de base :
-//  for ($i=1; $i <= 10; $i++) {
-//      if($i == 5) {
-//          echo "<h1>$i</h1>";
-//      }else {
-//          echo "<p>$i</p>";
-//      }
-//  }
+            case 1:
+            echo "i égal 1";
+            break;
 
- // correction :
- 
-//  for ($i=1; $i <= 10; $i++) {
-//     if($i < 5 || $i > 5) {   // || = OU
-//         echo "<p>$i</p>";
-//     }else {
-//         echo "<h1>$i</h1>";
-//     }
-// }
+                case 2:
+                echo "i égal 2";
+                break;
 
-// TERNAIRE (if/else syntaxe simplifiée) :
-
-    $isConnected = true;
-
-    echo $isConnected ? "Hello Neo" : "Gero" ;
-    //                    true          false
-
-
+                    default:
+                    echo "i n'est ni égal à 2, ni à 1, ni à 0.";
+}
