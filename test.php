@@ -1,50 +1,51 @@
 <?php
 
-// IF STRUCTURE DE CONTROLE
+// IF ET LOOP
 
-// if (2 < 5) {
-//     echo "truc";
+// for ($i=0; $i <= 10; $i++) {
+    
+// echo "<br> $i";
+
+//     if ($i % 2 == 0) { // modulo
+//     echo ": c'est pair";
+//     } else {
+//         echo ": c'est impair";
+//     }
 // }
 
-// ISSET
-// sert à contrôler et rendre TRUE un FALSY / vérifie si variable est déclarée et pas null
-// exemple :
+ // IF ET ELSE :
 
-// $truc="0";
-// var_dump(isset($truc)); //affiche true au lieu de false (au lieu de rien)
+//  if (false) {
+//     echo "Si" ;
+//  }else {
+//      echo "Sinon";
+//  };
 
-// EMPTY
-// sert à voir si variable est vide. vide = "" / 0 / 0.0 / "0" / null / false / array() (tableau vide) / $var; (variable déclarée mais pas de valeur)
-// exemple :
+// EXO : avoir le même rendu que le code ci-dessous, en changeant le code :
+// code de base :
+//  for ($i=1; $i <= 10; $i++) {
+//      if($i == 5) {
+//          echo "<h1>$i</h1>";
+//      }else {
+//          echo "<p>$i</p>";
+//      }
+//  }
 
-// var_dump(empty($truc)); // true au lieu de false
+ // correction :
+ 
+//  for ($i=1; $i <= 10; $i++) {
+//     if($i < 5 || $i > 5) {   // || = OU
+//         echo "<p>$i</p>";
+//     }else {
+//         echo "<h1>$i</h1>";
+//     }
+// }
 
-// _______________________ 
+// TERNAIRE (if/else syntaxe simplifiée) :
 
-$user = ["pseudo" => "blob", "email" => "bob@gmail.com"];
+    $isConnected = true;
 
-if (!empty($user["mdp"])) {
-    echo "<h1>OK</h1>";
-}
-// = false
-//_________
+    echo $isConnected ? "Hello Neo" : "Gero" ;
+    //                    true          false
 
-if (!isset($user["mdp"])) {
-    echo "<h1>OK</h1>";
-}
-// = true
-// ____________
 
-$user = ["pseudo" => "blob", "email" => "bob@gmail.com", "age => null"];
-
-if (isset($user["age"])) {
-    echo "<h1>OK</h1>";
-}
-// = false
-// ___________
-
-if (empty($user["age"])) {
-    echo "<h1>OK</h1>";
-}
-// = true
-//____________
