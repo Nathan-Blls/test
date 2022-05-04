@@ -1,50 +1,66 @@
 <?php
 
-// FONCTIONS
+// EXERCICE FIZZBUZZ : 
 
-function lanceRoquette (){    // on créé la fonction
-    echo "La violence c'est mal";   // on lui dit quoi faire
-}
+// FAIRE UN FIZZ BUZZ AVEC IF ELSE
+// PUIS REFAIRE AVEC SWITCH CASE
 
-// lanceRoquette();  >> affiche "La violence c'est mal"
+// SI MULTIPLE DE 3 - FIZZ
+// SI MULTIPLE DE 5 - BUZZ
+// SI LES DEUX - FIZZBUZZ
+// SI AUCUN JUSTE L’ITÉRATION
 
-function peace (){     // la fonction paix va appeller une autre fonction
-    lanceRoquette();
-}
+// AFFICHER TOUTES LES ITÉRATIONS
 
-// peace(); >> affiche "La violence c'est mal"
+// BOUCLE IF ELSE SWITCH COMPARATEUR
+// PUIS POUR LES PLUS RAPIDES FAIRE UNE V2 SI VOUS
+// AVEZ DES IDÉES.
+
+// % MODULO
+// FOR WHILE
+// IF SWITCH
 // __________________
 
-function salut($name){
-    echo "<p>Hello " . $name . " my friend !</p>";
-}
-salut("Calogero");
-salut("Mickael");
-salut(12);
+// AVEC IF ET ELSE :
 
-function tourName($tour,$prenom){
-    echo "<ul>";
-    for ($i=0; $i < $tour ; $i++){
-        echo "<li> Toto $i - $prenom</li>";
-    }
-    echo "</ul>";
-}
+for ($i=0; $i <= 20; $i++) {                // $i=0 commencer itération à zéro / 
+                                            // $i <= 20 : boucle tant que $i n'est pas à 20 
+                                            // $i++ incrémentation de 1 à chaque itération
 
-tourName(3,"Bob");
-tourName(6, "Revolver");
+    if (($i % 3 == 0) && ($i % 5 == 0)) {    // si multiples de 3 et 5
+      echo "$i - FizzBuzz <br>";             // afficher Fizzbuzz et revenir à la ligne
+      } else if ($i % 3 == 0) {              // sinon, si multiples de 3
+        echo "$i - Fizz <br>";               // afficher Fizz et revenir à la ligne
+        } else if ($i % 5 == 0) {            // sinon, si multiples de 5
+          echo "$i - Buzz <br>";             // afficher buzz et revenir à la ligne
+          } else {                           // sinon, juste afficher le nombre d'itération et revenir à la ligne
+            echo "$i <br>";
+          }
+        }
 
-// tourName(); bug car pas d'arguments !
+        // ________________________
+?>
 
-function multiplication($nb, $nb2){
-   return $nb * $nb2;       // renvoie le résultat, à coupler avec echo pour l'afficher
-}
+ <br>
+ <br>
 
-// // echo multiplication(2,3);   // 3*2 = 6
+   <?php
+    // AVEC SWITCH CASE :
+   for ($i=0; $i <= 20; $i++) {
 
-// $resultat = multiplication(2,3);
+            echo ($i . " ");               // Affiche le numéro d'itération
+            switch (true) {
+                case $i % 3 == 0 && $i % 5 == 0:    // cas où multiples de 3 et 5
+                    echo " - FIZZBUZZ";
+                    break;
 
-// // echo $resultat;
+                case $i % 3 == 0:    // multiples de 3
+                    echo " - FIZZ";
+                    break;
 
-// multiplication($resultat, multiplication(2,3));
-
-// echo $resultat;
+                case $i % 5 == 0:    // multiples de 5
+                    echo " - BUZZ";
+                    break;
+            }
+        echo "<br><hr>";    // retour à la ligne + séparateur
+        }
